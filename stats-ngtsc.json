@@ -1,0 +1,74 @@
+[
+  {
+    "name": "out-ngtsc/app/src/app/app.component.js",
+    "size": 906
+  },
+  {
+    "name": "out-ngtsc/app/src/app/article/article-comment.component.js",
+    "size": 2282
+  },
+  {
+    "name": "out-ngtsc/app/src/app/article/article.component.js",
+    "size": 8268
+  },
+  {
+    "name": "out-ngtsc/app/src/app/auth/auth.component.js",
+    "size": 3940
+  },
+  {
+    "name": "out-ngtsc/app/src/app/editor/editor.component.js",
+    "size": 4162
+  },
+  {
+    "name": "out-ngtsc/app/src/app/home/home.component.js",
+    "size": 4014
+  },
+  {
+    "name": "out-ngtsc/app/src/app/profile/profile-articles.component.js",
+    "size": 1125
+  },
+  {
+    "name": "out-ngtsc/app/src/app/profile/profile-favorites.component.js",
+    "size": 1094
+  },
+  {
+    "name": "out-ngtsc/app/src/app/profile/profile.component.js",
+    "size": 3161
+  },
+  {
+    "name": "out-ngtsc/app/src/app/settings/settings.component.js",
+    "size": 3862
+  },
+  {
+    "name": "out-ngtsc/app/src/app/shared/article-helpers/article-list.component.js",
+    "size": 2545
+  },
+  {
+    "name": "out-ngtsc/app/src/app/shared/article-helpers/article-meta.component.js",
+    "size": 1242
+  },
+  {
+    "name": "out-ngtsc/app/src/app/shared/article-helpers/article-preview.component.js",
+    "size": 1903
+  },
+  {
+    "name": "out-ngtsc/app/src/app/shared/buttons/favorite-button.component.js",
+    "size": 2140
+  },
+  {
+    "name": "out-ngtsc/app/src/app/shared/buttons/follow-button.component.js",
+    "size": 2250
+  },
+  {
+    "name": "out-ngtsc/app/src/app/shared/layout/footer.component.js",
+    "size": 1028
+  },
+  {
+    "name": "out-ngtsc/app/src/app/shared/layout/header.component.js",
+    "size": 3506
+  },
+  {
+    "name": "out-ngtsc/app/src/app/shared/list-errors.component.js",
+    "size": 1207
+  }
+]

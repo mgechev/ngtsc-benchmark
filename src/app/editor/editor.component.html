@@ -34,8 +34,7 @@
               <input class="form-control"
                 type="text"
                 placeholder="Enter tags"
-                [formControl]="tagField"
-                (keyup.enter)="addTag()" />
+                [formControl]="tagField"/>
 
               <div class="tag-list">
                 <span *ngFor="let tag of article.tagList"

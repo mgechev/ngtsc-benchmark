@@ -1,0 +1,146 @@
+[
+  {
+    "name": "out-ngc/app/src/app/app.component.js",
+    "size": 459
+  },
+  {
+    "name": "out-ngc/app/src/app/app.component.ngfactory.js",
+    "size": 1814
+  },
+  {
+    "name": "out-ngc/app/src/app/article/article-comment.component.js",
+    "size": 884
+  },
+  {
+    "name": "out-ngc/app/src/app/article/article-comment.component.ngfactory.js",
+    "size": 3572
+  },
+  {
+    "name": "out-ngc/app/src/app/article/article.component.js",
+    "size": 2070
+  },
+  {
+    "name": "out-ngc/app/src/app/article/article.component.ngfactory.js",
+    "size": 15247
+  },
+  {
+    "name": "out-ngc/app/src/app/auth/auth.component.js",
+    "size": 1299
+  },
+  {
+    "name": "out-ngc/app/src/app/auth/auth.component.ngfactory.js",
+    "size": 9987
+  },
+  {
+    "name": "out-ngc/app/src/app/editor/editor.component.js",
+    "size": 1544
+  },
+  {
+    "name": "out-ngc/app/src/app/editor/editor.component.ngfactory.js",
+    "size": 10288
+  },
+  {
+    "name": "out-ngc/app/src/app/home/home.component.js",
+    "size": 1053
+  },
+  {
+    "name": "out-ngc/app/src/app/home/home.component.ngfactory.js",
+    "size": 5906
+  },
+  {
+    "name": "out-ngc/app/src/app/profile/profile-articles.component.js",
+    "size": 755
+  },
+  {
+    "name": "out-ngc/app/src/app/profile/profile-articles.component.ngfactory.js",
+    "size": 1670
+  },
+  {
+    "name": "out-ngc/app/src/app/profile/profile-favorites.component.js",
+    "size": 724
+  },
+  {
+    "name": "out-ngc/app/src/app/profile/profile-favorites.component.ngfactory.js",
+    "size": 1693
+  },
+  {
+    "name": "out-ngc/app/src/app/profile/profile.component.js",
+    "size": 883
+  },
+  {
+    "name": "out-ngc/app/src/app/profile/profile.component.ngfactory.js",
+    "size": 6033
+  },
+  {
+    "name": "out-ngc/app/src/app/settings/settings.component.js",
+    "size": 1258
+  },
+  {
+    "name": "out-ngc/app/src/app/settings/settings.component.ngfactory.js",
+    "size": 11598
+  },
+  {
+    "name": "out-ngc/app/src/app/shared/article-helpers/article-list.component.js",
+    "size": 1217
+  },
+  {
+    "name": "out-ngc/app/src/app/shared/article-helpers/article-list.component.ngfactory.js",
+    "size": 3438
+  },
+  {
+    "name": "out-ngc/app/src/app/shared/article-helpers/article-meta.component.js",
+    "size": 381
+  },
+  {
+    "name": "out-ngc/app/src/app/shared/article-helpers/article-meta.component.ngfactory.js",
+    "size": 2751
+  },
+  {
+    "name": "out-ngc/app/src/app/shared/article-helpers/article-preview.component.js",
+    "size": 525
+  },
+  {
+    "name": "out-ngc/app/src/app/shared/article-helpers/article-preview.component.ngfactory.js",
+    "size": 3780
+  },
+  {
+    "name": "out-ngc/app/src/app/shared/buttons/favorite-button.component.js",
+    "size": 1331
+  },
+  {
+    "name": "out-ngc/app/src/app/shared/buttons/favorite-button.component.ngfactory.js",
+    "size": 1950
+  },
+  {
+    "name": "out-ngc/app/src/app/shared/buttons/follow-button.component.js",
+    "size": 1326
+  },
+  {
+    "name": "out-ngc/app/src/app/shared/buttons/follow-button.component.ngfactory.js",
+    "size": 2057
+  },
+  {
+    "name": "out-ngc/app/src/app/shared/layout/footer.component.js",
+    "size": 333
+  },
+  {
+    "name": "out-ngc/app/src/app/shared/layout/footer.component.ngfactory.js",
+    "size": 2153
+  },
+  {
+    "name": "out-ngc/app/src/app/shared/layout/header.component.js",
+    "size": 536
+  },
+  {
+    "name": "out-ngc/app/src/app/shared/layout/header.component.ngfactory.js",
+    "size": 9246
+  },
+  {
+    "name": "out-ngc/app/src/app/shared/list-errors.component.js",
+    "size": 704
+  },
+  {
+    "name": "out-ngc/app/src/app/shared/list-errors.component.ngfactory.js",
+    "size": 1856
+  }
+]

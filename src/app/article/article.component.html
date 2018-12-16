@@ -20,16 +20,16 @@
         </span>
 
         <span [hidden]="canModify">
-          <app-follow-button
+          <app_follow_button
             [profile]="article.author"
             (toggle)="onToggleFollowing($event)">
-          </app-follow-button>
+          </app_follow_button>
 
-          <app-favorite-button
+          <app_favorite_button
             [article]="article"
             (toggle)="onToggleFavorite($event)">
             {{ article.favorited ? 'Unfavorite' : 'Favorite' }} Article <span class="counter">({{ article.favoritesCount }})</span>
-          </app-favorite-button>
+          </app_favorite_button>
         </span>
 
       </app-article-meta>
@@ -72,16 +72,16 @@
         </span>
 
         <span [hidden]="canModify">
-          <app-follow-button
+          <app_follow_button
             [profile]="article.author"
             (toggle)="onToggleFollowing($event)">
-          </app-follow-button>
+          </app_follow_button>
 
-          <app-favorite-button
+          <app_favorite_button
             [article]="article"
             (toggle)="onToggleFavorite($event)">
             {{ article.favorited ? 'Unfavorite' : 'Favorite' }} Article <span class="counter">({{ article.favoritesCount }})</span>
-          </app-favorite-button>
+          </app_favorite_button>
         </span>
 
       </app-article-meta>
@@ -115,11 +115,11 @@
           <a [routerLink]="['/login']">Sign in</a> or <a [routerLink]="['/register']">sign up</a> to add comments on this article.
         </div>
 
-        <app-article-comment
+        <app_article_comment
           *ngFor="let comment of comments"
           [comment]="comment"
           (deleteComment)="onDeleteComment(comment)">
-        </app-article-comment>
+        </app_article_comment>
 
       </div>
     </div>

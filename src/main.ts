@@ -1,15 +1,6 @@
-import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { ɵrenderComponent as renderComponent } from '@angular/core';
 
-import { AppModule } from './app/app.module';
-import { environment } from './environments/environment';
+import { AppComponent } from './app/app.component';
 
-if (environment.production) {
-  enableProdMode();
-}
+renderComponent(AppComponent);
 
-const bootstrapPromise =  platformBrowserDynamic().bootstrapModule(AppModule);
-
-// Logging bootstrap information
-bootstrapPromise.then(success => console.log(`Bootstrap success`))
-  .catch(err => console.error(err));

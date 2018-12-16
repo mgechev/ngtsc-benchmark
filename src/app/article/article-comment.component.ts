@@ -4,13 +4,11 @@ import { Comment, User, UserService } from '../core';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-article-comment',
+  selector: 'app_article_comment',
   templateUrl: './article-comment.component.html'
 })
 export class ArticleCommentComponent implements OnInit, OnDestroy {
-  constructor(
-    private userService: UserService
-  ) {}
+  constructor(private userService: UserService) {}
 
   private subscription: Subscription;
 
@@ -21,11 +19,9 @@ export class ArticleCommentComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     // Load the current user's data
-    this.subscription = this.userService.currentUser.subscribe(
-      (userData: User) => {
-        this.canModify = (userData.username === this.comment.author.username);
-      }
-    );
+    this.subscription = this.userService.currentUser.subscribe((userData: User) => {
+      this.canModify = userData.username === this.comment.author.username;
+    });
   }
 
   ngOnDestroy() {
@@ -35,6 +31,4 @@ export class ArticleCommentComponent implements OnInit, OnDestroy {
   deleteClicked() {
     this.deleteComment.emit(true);
   }
-
-
 }
