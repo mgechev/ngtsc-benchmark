@@ -63,57 +63,64 @@ const baselineCmp = {};
 ///// NGC
 
 for (let entry of ngc) {
-  const key = entry.name.replace('.ngfactory', '');
+  const key = entry.name.split('/').pop();
   if (key.endsWith('.html')) {
     continue;
   }
-  ngcCmp[key] = ngcCmp[key] || 0;
-  ngcCmp[key] += entry.size;
+  ngcCmp[key] = entry.size;
 }
 
-const ngcCsv = [[], []];
+const ngcCsv = [[], [], []];
 Object.keys(ngcCmp).forEach(c => {
+  if (!c.endsWith('.component.js')) {
+    return;
+  }
   ngcCsv[0].push(c.split('/').pop())
   ngcCsv[1].push(ngcCmp[c]);
+  const factory = c.replace(/\.js$/, '.ngfactory.js');
+  ngcCsv[2].push(ngcCmp[factory]);
 });
 
-fs.writeFileSync('stats-ngc.csv', ngcCsv[0].join(',') + '\n' + ngcCsv[1].join(','));
+fs.writeFileSync('stats-ngc.csv', ngcCsv.map(r => r.join(',')).join('\n'));
 
 ///// NGTSC
 
 for (let entry of ngtsc) {
-  const key = entry.name;
-  if (key.endsWith('.html')) {
-    continue;
-  }
-  ngtscCmp[entry.name] = entry.size;
+  const name = entry.name.split('/').pop();
+  ngtscCmp[name] = entry.size;
 }
 
-const ngtscCsv = [[], []];
+const ngtscCsv = [[], [], []];
 Object.keys(ngtscCmp).forEach(c => {
-  ngtscCsv[0].push(c.split('/').pop())
-  ngtscCsv[1].push(ngtscCmp[c]);
+  ngtscCsv[0].push(c)
+  ngtscCsv[1].push(ngcCmp[c]);
+  // ngtsc output - .component.js
+  ngtscCsv[2].push(ngtscCmp[c] - ngcCmp[c]);
 });
 
-fs.writeFileSync('stats-ngtsc.csv', ngtscCsv[0].join(',') + '\n' + ngtscCsv[1].join(','));
+fs.writeFileSync('stats-ngtsc.csv', ngtscCsv.map(r => r.join(',')).join('\n'));
 
 
 ///// Baseline
 
 for (let entry of baseline) {
-  const key = entry.name.replace('.html', '.js').split('/').pop();
+  const key = entry.name.split('/').pop();
   if (key.indexOf('ngfactory') >= 0) {
     continue;
   }
-  baselineCmp[key] = baselineCmp[key] || 0;
-  baselineCmp[key] += entry.size;
+  baselineCmp[key] = entry.size;
 }
 
-const baselineCsv = [[], []];
+const baselineCsv = [[], [], []];
 Object.keys(baselineCmp).forEach(c => {
+  if (!c.endsWith('.component.js')) {
+    return;
+  }
   baselineCsv[0].push(c.split('/').pop())
   baselineCsv[1].push(baselineCmp[c]);
+  const template = c.replace(/\.js$/, '.html');
+  baselineCsv[2].push(baselineCmp[template]);
 });
 
-fs.writeFileSync('stats-baseline.csv', baselineCsv[0].join(',') + '\n' + baselineCsv[1].join(','));
+fs.writeFileSync('stats-baseline.csv', baselineCsv.map(r => r.join(',')).join('\n'));
 
