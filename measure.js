@@ -47,3 +47,33 @@ const totalNgtsc = ngtsc.reduce((p, c) => c.size + p, 0);
 
 console.log('NGC:', totalNgc, 'NGTSC:', totalNgtsc);
 
+const ngcCmp = {};
+const ngtscCmp = {};
+
+for (let entry of ngc) {
+  const key = entry.name.replace('.ngfactory', '');
+  ngcCmp[key] = ngcCmp[key] || 0;
+  ngcCmp[key] += entry.size;
+}
+
+const ngcCsv = [[], []];
+Object.keys(ngcCmp).forEach(c => {
+  ngcCsv[0].push(c.split('/').pop())
+  ngcCsv[1].push(ngcCmp[c]);
+});
+
+fs.writeFileSync('stats-ngc.csv', ngcCsv[0].join(',') + '\n' + ngcCsv[1].join(','));
+
+for (let entry of ngtsc) {
+  ngtscCmp[entry.name] = entry.size;
+}
+
+const ngtscCsv = [[], []];
+Object.keys(ngtscCmp).forEach(c => {
+  ngtscCsv[0].push(c.split('/').pop())
+  ngtscCsv[1].push(ngtscCmp[c]);
+});
+
+fs.writeFileSync('stats-ngtsc.csv', ngtscCsv[0].join(',') + '\n' + ngtscCsv[1].join(','));
+
+
