@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const rimraf = require('rimraf');
 const execSync = require('child_process').execSync;
+const minify = require('html-minifier').minify;
 
 function getBinarySize(string) {
   return Buffer.byteLength(string, 'utf8');
@@ -13,14 +14,17 @@ const measure = (dir, result = []) => {
   for (let node of files) {
     if (fs.lstatSync(path.join(dir, node)).isDirectory()) {
       measure(path.join(dir, node), result);
-    } else if (node.endsWith('.component.js') || node.endsWith('.component.ngfactory.js')) {
-      const minified = uglify.minify(fs.readFileSync(path.join(dir, node)).toString());
-      if (minified.error) {
-        throw new Error(node + ' ' + minified.error);
+    } else if (node.endsWith('.component.js') || node.endsWith('.component.ngfactory.js') || node.endsWith('.component.html')) {
+      const content = fs.readFileSync(path.join(dir, node)).toString();
+      let minified = null;
+      if (node.endsWith('.html')) {
+        minified = minify(content);
+      } else {
+        minified = uglify.minify(content).code;
       }
       result.push({
         name: path.join(dir, node),
-        size: getBinarySize(minified.code)
+        size: getBinarySize(minified)
       });
     }
   }
@@ -29,6 +33,7 @@ const measure = (dir, result = []) => {
 
 const NGC_DIR = './out-ngc/app/src';
 const NGTSC_DIR = './out-ngtsc/app/src';
+const BASELINE_DIR = './src';
 
 rimraf.sync(NGC_DIR);
 rimraf.sync(NGTSC_DIR);
@@ -36,11 +41,15 @@ rimraf.sync(NGTSC_DIR);
 execSync('./node_modules/.bin/ngc -p src/tsconfig.ngc.json');
 execSync('./node_modules/.bin/ngc -p src/tsconfig.ngtsc.json');
 
-fs.writeFileSync('stats-ngc.json', JSON.stringify(measure('./out-ngc/app/src'), null, 2));
-fs.writeFileSync('stats-ngtsc.json', JSON.stringify(measure('./out-ngtsc/app/src'), null, 2));
+fs.writeFileSync('stats-ngc.json', JSON.stringify(measure(NGC_DIR), null, 2));
+fs.writeFileSync('stats-ngtsc.json', JSON.stringify(measure(NGTSC_DIR), null, 2));
+
+const templates = measure(BASELINE_DIR);
+fs.writeFileSync('stats-baseline.json', JSON.stringify(measure(NGC_DIR, templates), null, 2));
 
 const ngc = require('./stats-ngc.json');
 const ngtsc = require('./stats-ngtsc.json');
+const baseline = require('./stats-baseline.json');
 
 const totalNgc = ngc.reduce((p, c) => c.size + p, 0);
 const totalNgtsc = ngtsc.reduce((p, c) => c.size + p, 0);
@@ -49,9 +58,15 @@ console.log('NGC:', totalNgc, 'NGTSC:', totalNgtsc);
 
 const ngcCmp = {};
 const ngtscCmp = {};
+const baselineCmp = {};
+
+///// NGC
 
 for (let entry of ngc) {
   const key = entry.name.replace('.ngfactory', '');
+  if (key.endsWith('.html')) {
+    continue;
+  }
   ngcCmp[key] = ngcCmp[key] || 0;
   ngcCmp[key] += entry.size;
 }
@@ -64,7 +79,13 @@ Object.keys(ngcCmp).forEach(c => {
 
 fs.writeFileSync('stats-ngc.csv', ngcCsv[0].join(',') + '\n' + ngcCsv[1].join(','));
 
+///// NGTSC
+
 for (let entry of ngtsc) {
+  const key = entry.name;
+  if (key.endsWith('.html')) {
+    continue;
+  }
   ngtscCmp[entry.name] = entry.size;
 }
 
@@ -76,4 +97,23 @@ Object.keys(ngtscCmp).forEach(c => {
 
 fs.writeFileSync('stats-ngtsc.csv', ngtscCsv[0].join(',') + '\n' + ngtscCsv[1].join(','));
 
+
+///// Baseline
+
+for (let entry of baseline) {
+  const key = entry.name.replace('.html', '.js').split('/').pop();
+  if (key.indexOf('ngfactory') >= 0) {
+    continue;
+  }
+  baselineCmp[key] = baselineCmp[key] || 0;
+  baselineCmp[key] += entry.size;
+}
+
+const baselineCsv = [[], []];
+Object.keys(baselineCmp).forEach(c => {
+  baselineCsv[0].push(c.split('/').pop())
+  baselineCsv[1].push(baselineCmp[c]);
+});
+
+fs.writeFileSync('stats-baseline.csv', baselineCsv[0].join(',') + '\n' + baselineCsv[1].join(','));
 

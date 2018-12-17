@@ -39,6 +39,7 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "^9.4.0",
     "codelyzer": "^4.0.1",
+    "html-minifier": "^3.5.21",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",
