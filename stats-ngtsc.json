@@ -1,74 +1,74 @@
 [
   {
     "name": "out-ngtsc/app/src/app/app.component.js",
-    "size": 906
+    "size": 1520
   },
   {
     "name": "out-ngtsc/app/src/app/article/article-comment.component.js",
-    "size": 2282
+    "size": 3863
   },
   {
     "name": "out-ngtsc/app/src/app/article/article.component.js",
-    "size": 8268
+    "size": 12380
   },
   {
     "name": "out-ngtsc/app/src/app/auth/auth.component.js",
-    "size": 3940
+    "size": 5738
   },
   {
     "name": "out-ngtsc/app/src/app/editor/editor.component.js",
-    "size": 4162
+    "size": 5978
   },
   {
     "name": "out-ngtsc/app/src/app/home/home.component.js",
-    "size": 4014
+    "size": 6351
   },
   {
     "name": "out-ngtsc/app/src/app/profile/profile-articles.component.js",
-    "size": 1125
+    "size": 1824
   },
   {
     "name": "out-ngtsc/app/src/app/profile/profile-favorites.component.js",
-    "size": 1094
+    "size": 1795
   },
   {
     "name": "out-ngtsc/app/src/app/profile/profile.component.js",
-    "size": 3161
+    "size": 5128
   },
   {
     "name": "out-ngtsc/app/src/app/settings/settings.component.js",
-    "size": 3862
+    "size": 5352
   },
   {
     "name": "out-ngtsc/app/src/app/shared/article-helpers/article-list.component.js",
-    "size": 2545
+    "size": 4160
   },
   {
     "name": "out-ngtsc/app/src/app/shared/article-helpers/article-meta.component.js",
-    "size": 1242
+    "size": 2369
   },
   {
     "name": "out-ngtsc/app/src/app/shared/article-helpers/article-preview.component.js",
-    "size": 1903
+    "size": 3341
   },
   {
     "name": "out-ngtsc/app/src/app/shared/buttons/favorite-button.component.js",
-    "size": 2140
+    "size": 3026
   },
   {
     "name": "out-ngtsc/app/src/app/shared/buttons/follow-button.component.js",
-    "size": 2250
+    "size": 3154
   },
   {
     "name": "out-ngtsc/app/src/app/shared/layout/footer.component.js",
-    "size": 1028
+    "size": 1740
   },
   {
     "name": "out-ngtsc/app/src/app/shared/layout/header.component.js",
-    "size": 3506
+    "size": 5068
   },
   {
     "name": "out-ngtsc/app/src/app/shared/list-errors.component.js",
-    "size": 1207
+    "size": 2263
   }
 ]

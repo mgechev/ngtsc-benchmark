@@ -73,7 +73,7 @@
   },
   {
     "name": "out-ngc/app/src/app/app.component.js",
-    "size": 459
+    "size": 942
   },
   {
     "name": "out-ngc/app/src/app/app.component.ngfactory.js",
@@ -81,7 +81,7 @@
   },
   {
     "name": "out-ngc/app/src/app/article/article-comment.component.js",
-    "size": 884
+    "size": 1470
   },
   {
     "name": "out-ngc/app/src/app/article/article-comment.component.ngfactory.js",
@@ -89,7 +89,7 @@
   },
   {
     "name": "out-ngc/app/src/app/article/article.component.js",
-    "size": 2070
+    "size": 2525
   },
   {
     "name": "out-ngc/app/src/app/article/article.component.ngfactory.js",
@@ -97,7 +97,7 @@
   },
   {
     "name": "out-ngc/app/src/app/auth/auth.component.js",
-    "size": 1299
+    "size": 1761
   },
   {
     "name": "out-ngc/app/src/app/auth/auth.component.ngfactory.js",
@@ -105,7 +105,7 @@
   },
   {
     "name": "out-ngc/app/src/app/editor/editor.component.js",
-    "size": 1544
+    "size": 2006
   },
   {
     "name": "out-ngc/app/src/app/editor/editor.component.ngfactory.js",
@@ -113,7 +113,7 @@
   },
   {
     "name": "out-ngc/app/src/app/home/home.component.js",
-    "size": 1053
+    "size": 1522
   },
   {
     "name": "out-ngc/app/src/app/home/home.component.ngfactory.js",
@@ -121,7 +121,7 @@
   },
   {
     "name": "out-ngc/app/src/app/profile/profile-articles.component.js",
-    "size": 755
+    "size": 1231
   },
   {
     "name": "out-ngc/app/src/app/profile/profile-articles.component.ngfactory.js",
@@ -129,7 +129,7 @@
   },
   {
     "name": "out-ngc/app/src/app/profile/profile-favorites.component.js",
-    "size": 724
+    "size": 1200
   },
   {
     "name": "out-ngc/app/src/app/profile/profile-favorites.component.ngfactory.js",
@@ -137,7 +137,7 @@
   },
   {
     "name": "out-ngc/app/src/app/profile/profile.component.js",
-    "size": 883
+    "size": 1359
   },
   {
     "name": "out-ngc/app/src/app/profile/profile.component.ngfactory.js",
@@ -145,7 +145,7 @@
   },
   {
     "name": "out-ngc/app/src/app/settings/settings.component.js",
-    "size": 1258
+    "size": 1727
   },
   {
     "name": "out-ngc/app/src/app/settings/settings.component.ngfactory.js",
@@ -153,7 +153,7 @@
   },
   {
     "name": "out-ngc/app/src/app/shared/article-helpers/article-list.component.js",
-    "size": 1217
+    "size": 1842
   },
   {
     "name": "out-ngc/app/src/app/shared/article-helpers/article-list.component.ngfactory.js",
@@ -161,7 +161,7 @@
   },
   {
     "name": "out-ngc/app/src/app/shared/article-helpers/article-meta.component.js",
-    "size": 381
+    "size": 916
   },
   {
     "name": "out-ngc/app/src/app/shared/article-helpers/article-meta.component.ngfactory.js",
@@ -169,7 +169,7 @@
   },
   {
     "name": "out-ngc/app/src/app/shared/article-helpers/article-preview.component.js",
-    "size": 525
+    "size": 1060
   },
   {
     "name": "out-ngc/app/src/app/shared/article-helpers/article-preview.component.ngfactory.js",
@@ -177,7 +177,7 @@
   },
   {
     "name": "out-ngc/app/src/app/shared/buttons/favorite-button.component.js",
-    "size": 1331
+    "size": 1903
   },
   {
     "name": "out-ngc/app/src/app/shared/buttons/favorite-button.component.ngfactory.js",
@@ -185,7 +185,7 @@
   },
   {
     "name": "out-ngc/app/src/app/shared/buttons/follow-button.component.js",
-    "size": 1326
+    "size": 1898
   },
   {
     "name": "out-ngc/app/src/app/shared/buttons/follow-button.component.ngfactory.js",
@@ -193,7 +193,7 @@
   },
   {
     "name": "out-ngc/app/src/app/shared/layout/footer.component.js",
-    "size": 333
+    "size": 683
   },
   {
     "name": "out-ngc/app/src/app/shared/layout/footer.component.ngfactory.js",
@@ -201,7 +201,7 @@
   },
   {
     "name": "out-ngc/app/src/app/shared/layout/header.component.js",
-    "size": 536
+    "size": 1019
   },
   {
     "name": "out-ngc/app/src/app/shared/layout/header.component.ngfactory.js",
@@ -209,7 +209,7 @@
   },
   {
     "name": "out-ngc/app/src/app/shared/list-errors.component.js",
-    "size": 704
+    "size": 1278
   },
   {
     "name": "out-ngc/app/src/app/shared/list-errors.component.ngfactory.js",
