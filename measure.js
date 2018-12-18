@@ -70,7 +70,7 @@ for (let entry of ngc) {
   ngcCmp[key] = entry.size;
 }
 
-const ngcCsv = [[], [], []];
+const ngcCsv = [[''], ['controller'], ['template']];
 Object.keys(ngcCmp).forEach(c => {
   if (!c.endsWith('.component.js')) {
     return;
@@ -90,7 +90,7 @@ for (let entry of ngtsc) {
   ngtscCmp[name] = entry.size;
 }
 
-const ngtscCsv = [[], [], []];
+const ngtscCsv = [[''], ['controller'], ['template']];
 Object.keys(ngtscCmp).forEach(c => {
   ngtscCsv[0].push(c)
   ngtscCsv[1].push(ngcCmp[c]);
@@ -111,7 +111,7 @@ for (let entry of baseline) {
   baselineCmp[key] = entry.size;
 }
 
-const baselineCsv = [[], [], []];
+const baselineCsv = [[''], ['controller'], ['template']];
 Object.keys(baselineCmp).forEach(c => {
   if (!c.endsWith('.component.js')) {
     return;
@@ -123,4 +123,11 @@ Object.keys(baselineCmp).forEach(c => {
 });
 
 fs.writeFileSync('stats-baseline.csv', baselineCsv.map(r => r.join(',')).join('\n'));
+
+fs.writeFileSync(
+  'all.csv',
+  ngcCsv.map(r => r.join(',')).join('\n') + '\n' +
+  ngtscCsv.map(r => r.join(',')).join('\n') + '\n' +
+  baselineCsv.map(r => r.join(',')).join('\n') + '\n'
+);
 
