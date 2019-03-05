@@ -13,7 +13,7 @@
   },
   {
     "name": "out-ngc/app/src/app/article/article-comment.component.ngfactory.js",
-    "size": 3572
+    "size": 3466
   },
   {
     "name": "out-ngc/app/src/app/article/article.component.js",
@@ -21,7 +21,7 @@
   },
   {
     "name": "out-ngc/app/src/app/article/article.component.ngfactory.js",
-    "size": 15247
+    "size": 15101
   },
   {
     "name": "out-ngc/app/src/app/auth/auth.component.js",
@@ -29,7 +29,7 @@
   },
   {
     "name": "out-ngc/app/src/app/auth/auth.component.ngfactory.js",
-    "size": 9987
+    "size": 9968
   },
   {
     "name": "out-ngc/app/src/app/editor/editor.component.js",
@@ -37,7 +37,7 @@
   },
   {
     "name": "out-ngc/app/src/app/editor/editor.component.ngfactory.js",
-    "size": 10288
+    "size": 10269
   },
   {
     "name": "out-ngc/app/src/app/home/home.component.js",
@@ -69,7 +69,7 @@
   },
   {
     "name": "out-ngc/app/src/app/profile/profile.component.ngfactory.js",
-    "size": 6033
+    "size": 6079
   },
   {
     "name": "out-ngc/app/src/app/settings/settings.component.js",
@@ -77,7 +77,7 @@
   },
   {
     "name": "out-ngc/app/src/app/settings/settings.component.ngfactory.js",
-    "size": 11598
+    "size": 11579
   },
   {
     "name": "out-ngc/app/src/app/shared/article-helpers/article-list.component.js",
@@ -93,7 +93,7 @@
   },
   {
     "name": "out-ngc/app/src/app/shared/article-helpers/article-meta.component.ngfactory.js",
-    "size": 2751
+    "size": 2643
   },
   {
     "name": "out-ngc/app/src/app/shared/article-helpers/article-preview.component.js",
@@ -125,7 +125,7 @@
   },
   {
     "name": "out-ngc/app/src/app/shared/layout/footer.component.ngfactory.js",
-    "size": 2153
+    "size": 2053
   },
   {
     "name": "out-ngc/app/src/app/shared/layout/header.component.js",
@@ -133,7 +133,7 @@
   },
   {
     "name": "out-ngc/app/src/app/shared/layout/header.component.ngfactory.js",
-    "size": 9246
+    "size": 9384
   },
   {
     "name": "out-ngc/app/src/app/shared/list-errors.component.js",

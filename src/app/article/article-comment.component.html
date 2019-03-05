@@ -13,7 +13,7 @@
       {{ comment.author.username }}
     </a>
     <span class="date-posted">
-      {{ comment.createdAt | date: 'longDate' }}
+      {{ comment.createdAt }}
     </span>
     <span class="mod-options" [hidden]="!canModify">
       <i class="ion-trash-a" (click)="deleteClicked()"></i>

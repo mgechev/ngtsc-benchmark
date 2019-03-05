@@ -1,3 +1,3 @@
 ,app.component.js,article-comment.component.js,article.component.js,auth.component.js,editor.component.js,home.component.js,profile-articles.component.js,profile-favorites.component.js,profile.component.js,settings.component.js,article-list.component.js,article-meta.component.js,article-preview.component.js,favorite-button.component.js,follow-button.component.js,footer.component.js,header.component.js,list-errors.component.js
 controller,942,1470,2525,1761,2006,1522,1231,1200,1359,1727,1842,916,1060,1903,1898,683,1019,1278
-template,114,677,3580,1410,1566,1734,78,79,1495,1730,594,405,595,266,344,310,1622,115
+template,114,658,3569,1410,1566,1734,78,79,1495,1730,594,386,595,266,344,295,1622,115
