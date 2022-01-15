@@ -25,7 +25,7 @@
     "@angular/platform-browser-dynamic": "9.0.0-rc.2",
     "@angular/router": "9.0.0-rc.2",
     "core-js": "^2.4.1",
-    "marked": "^0.3.9",
+    "marked": "^4.0.10",
     "rxjs": "^6.2.1",
     "zone.js": "^0.8.26",
     "rxjs-compat": "^6.0.0-rc.0"
